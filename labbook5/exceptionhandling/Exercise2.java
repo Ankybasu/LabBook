@@ -14,7 +14,7 @@ class InvalidNameException extends RuntimeException{
 public class Exercise2 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		String firstName = null,lastName;
+		String firstName,lastName;
 		try {
 		System.out.println("Enter the first name: ");
 		firstName=sc.nextLine();
