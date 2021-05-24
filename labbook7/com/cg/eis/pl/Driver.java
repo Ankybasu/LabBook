@@ -42,24 +42,32 @@ public class Driver {
 			System.out.println("Enter insurance scheme: ");
 			sc.nextLine();
 			String str=sc.nextLine();
+			boolean flag =false;
 		    for(Map.Entry<Integer,Employee> entry:map.entrySet()){    
 		        Employee b=entry.getValue();  
 		        if(b.getInsuranceScheme().equalsIgnoreCase(str)) {
 		        	ob1.display(b);
+		        	flag=true;
 		        }
-		    } 
+		    }
+	        if(flag==false) {
+	        	System.out.println("No result!");
+	        }
 		}
 		if(ch==3) {
 			System.out.println("Enter employee id: ");
 			int id=sc.nextInt();
-		    for(Map.Entry<Integer,Employee> entry:map.entrySet()){    
-		        Integer key=entry.getKey();  
-		        Employee b=entry.getValue();  
-		        if(b.getId()==id) {
-		        	map.remove(key);
-		        	break;
-		        }
-		    }    	
+			if(map.containsKey(id)) {
+				map.remove(id);
+			}
+			else {
+				System.out.println("No such empId found!");
+			}
+			/*
+			 * for(Map.Entry<Integer,Employee> entry:map.entrySet()){ Integer
+			 * key=entry.getKey(); Employee b=entry.getValue(); if(b.getId()==id) {
+			 * map.remove(key); break; } }
+			 */   	
 		}
 		if(ch==0) {
 			System.exit(0);
