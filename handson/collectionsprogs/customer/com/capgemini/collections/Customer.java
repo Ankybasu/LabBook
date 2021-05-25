@@ -1,11 +1,13 @@
 package com.capgemini.collections;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Customer {
 	@Override
 	public String toString() {
-		return "Customer [cid=" + cid + ", custName=" + custName + ", age=" + age + ", dob=" + dob + ", email=" + email
+		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+		return "Customer [cid=" + cid + ", custName=" + custName + ", age=" + age + ", dob=" + sdf.format(dob) + ", email=" + email
 				+ ", mobileNumber=" + mobileNumber + "]";
 	}
 	private int cid;

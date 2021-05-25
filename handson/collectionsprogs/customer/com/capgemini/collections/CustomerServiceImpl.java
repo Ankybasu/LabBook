@@ -17,7 +17,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public Customer entry(Customer c){
 		// TODO Auto-generated method stub
-		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY");
+		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 		sdf.setLenient(false);
 		int cid;
 		String custName;
