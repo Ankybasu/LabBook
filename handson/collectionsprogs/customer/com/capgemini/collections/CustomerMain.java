@@ -37,7 +37,10 @@ public class CustomerMain {
 				break;
 			case 5:
 				System.out.println("Enter the id of the customer to be updated: ");
-				ob.update(sc.nextInt());
+				if(ob.update(sc.nextInt()))
+					System.out.println("Updated!");
+				else
+					System.out.println("No such record found!");
 				break;
 			default:
 				System.out.println("Wrong Choice!");
