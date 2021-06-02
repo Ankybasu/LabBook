@@ -85,14 +85,17 @@ public class BookServiceImpl implements BookService{
 	public void delete() {
 		// TODO Auto-generated method stub
 		boolean flag=false;
+		Book temp=null;
 		System.out.println("Enter the book id of the book to be deleted!");
 		int id=sc.nextInt();
 		for(Book i:bookList) {
 			if(i.getBid()==id) {
+				temp=i;
 				i=null;
 				flag=true;
 			}
 		}
+		bookList.remove(temp);
 		if(flag==false) {
 			throw new BookNotFoundException("Book not found!");
 		}
