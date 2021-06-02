@@ -24,18 +24,10 @@ public class VegetableManager {
 		vegList.add(v);
 	}
 	public void read() {
-		
-		  System.out.println("Before sorting: ");
 		  for(Vegetable i: vegList) {
 		  if(i!=null) 
 			  System.out.println(i);
 		  }
-		 
-		Collections.sort(vegList);
-		System.out.println("After sorting");
-		for(Vegetable i: vegList) {
-			System.out.println(i);
-			}
 		}
 	public void update() {
 		System.out.println("Enter the vegetable id to be updated: ");
@@ -71,5 +63,43 @@ public class VegetableManager {
 		vegList.remove(temp);
 		if(flag==false)
 			System.out.println("No such vegetable found!");
+	}
+	public void sort() {
+		Collections.sort(vegList);
+		System.out.println("===============");
+		System.out.println("Sorted List");
+		System.out.println("===============");
+		for(Vegetable p : vegList) {
+			System.out.println(p);
+		}
+	}
+	
+	public void sortProductUsingName() {
+		Collections.sort(vegList, new VegetableNameComparator());
+		System.out.println("===============");
+		System.out.println("Sorted List using name");
+		System.out.println("===============");
+		for(Vegetable p : vegList) {
+			System.out.println(p);
+		}
+	}
+	
+	public void sortProductUsingProductID() {
+		Collections.sort(vegList, new VegetableIdComparator());
+		System.out.println("===============");
+		System.out.println("Sorted List using ID");
+		System.out.println("===============");
+		for(Vegetable p : vegList) {
+			System.out.println(p);
+		}
+	}
+	public void sortProductUsingProductPrice() {
+		Collections.sort(vegList, new VegetablePriceComparator());
+		System.out.println("===============");
+		System.out.println("Sorted List using price");
+		System.out.println("===============");
+		for(Vegetable p : vegList) {
+			System.out.println(p);
+		}
 	}
 }

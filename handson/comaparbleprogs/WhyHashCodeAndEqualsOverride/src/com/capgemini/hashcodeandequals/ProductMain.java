@@ -8,5 +8,9 @@ public class ProductMain {
 		ob.createProduct();
 		ob.compareProducts();
 		ob.print();
+		ob.sort();
+		ob.sortProductUsingName();
+		ob.sortProductUsingProductID();
+		ob.sortProductUsingProductPrice();
 	}
 }

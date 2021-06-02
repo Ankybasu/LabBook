@@ -15,6 +15,10 @@ public class VegetableMain {
 			System.out.println("Enter 2 to read: ");
 			System.out.println("Enter 3 to update: ");
 			System.out.println("Enter 4 to delete: ");
+			System.out.println("Enter 5 to sort: ");
+			System.out.println("Enter 6 to sort by id");
+			System.out.println("Enter 7 to sort by name");
+			System.out.println("Enter 8 to sort by price: ");
 			int choice=sc.nextInt();
 		switch(choice) {
 		case 1:
@@ -28,6 +32,17 @@ public class VegetableMain {
 			break;
 		case 4:
 			vm.delete();
+		case 5:
+			vm.sort();
+			break;
+		case 6:
+			vm.sortProductUsingProductID();
+			break;
+		case 7:
+			vm.sortProductUsingName();
+			break;
+		case 8:
+			vm.sortProductUsingProductPrice();
 			break;
 			default:
 				System.out.println("Wrong choice!");

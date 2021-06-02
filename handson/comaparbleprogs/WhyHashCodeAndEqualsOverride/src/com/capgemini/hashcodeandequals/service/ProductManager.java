@@ -36,4 +36,43 @@ public class ProductManager {
 			System.out.println(i);
 		}
 	}
+	public void sort() {
+		Collections.sort(productList);
+		System.out.println("===============");
+		System.out.println("Sorted List");
+		System.out.println("===============");
+		for(Product p : productList) {
+			System.out.println(p);
+		}
+	}
+	
+	public void sortProductUsingName() {
+		Collections.sort(productList, new ProductNameComparator());
+		System.out.println("===============");
+		System.out.println("Sorted List using name");
+		System.out.println("===============");
+		for(Product p : productList) {
+			System.out.println(p);
+		}
+	}
+	
+	public void sortProductUsingProductID() {
+		Collections.sort(productList, new ProductIdComparator());
+		System.out.println("===============");
+		System.out.println("Sorted List using ID");
+		System.out.println("===============");
+		for(Product p : productList) {
+			System.out.println(p);
+		}
+	}
+	public void sortProductUsingProductPrice() {
+		Collections.sort(productList, new ProductPriceComparator());
+		System.out.println("===============");
+		System.out.println("Sorted List using price");
+		System.out.println("===============");
+		for(Product p : productList) {
+			System.out.println(p);
+		}
+	}
+	
 }

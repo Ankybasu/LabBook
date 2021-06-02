@@ -65,8 +65,9 @@ public class Product implements Comparable<Product>{
 		this.price = price;
 	}
 	@Override
-	public int compareTo(Product prod) {
+	public int compareTo(Product o) {
 		// TODO Auto-generated method stub
-		return pname.compareTo(prod.pname);
+		return (int)(price-o.price);
 	}
+
 }
