@@ -124,7 +124,7 @@ public class MainClass {
 					for(Employee j: managers) {
 						if(EmployeeRepository.empList.contains(j)) {
 							for(Employee i: EmployeeRepository.empList) {
-							s.add("employee "+i.getFirstName()+"reports to manager: " +j.getFirstName());
+							s.add("employee "+i.getFirstName()+" reports to manager: " +j.getFirstName());
 						}
 						}
 					}
