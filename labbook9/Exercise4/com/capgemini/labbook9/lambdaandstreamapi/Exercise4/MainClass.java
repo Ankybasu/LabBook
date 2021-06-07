@@ -15,8 +15,6 @@ public class MainClass {
 			int age;
 			char ch='y';
 			do {
-				System.out.println("Book App: ");
-				System.out.println("=============================");
 				System.out.println("Enter 1 to create");
 				System.out.println("Enter 2 to read");
 				System.out.println("Enter 3 to update");
